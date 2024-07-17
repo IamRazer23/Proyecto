@@ -20,32 +20,32 @@ public class LoginPanel extends JPanel {
         JLabel lblLogin = new JLabel("Inicio de Sesión");
         lblLogin.setForeground(new Color(239, 199, 94));
         lblLogin.setFont(new Font("Tahoma", Font.BOLD, 40));
-        lblLogin.setBounds(301, 133, 336, 52);
+        lblLogin.setBounds(296, 228, 336, 52);
         add(lblLogin);
 
         JLabel lblUser = new JLabel("Usuario");
         lblUser.setForeground(new Color(239, 199, 94));
         lblUser.setFont(new Font("Tahoma", Font.PLAIN, 30));
-        lblUser.setBounds(246, 233, 100, 30);
+        lblUser.setBounds(245, 310, 100, 30);
         add(lblUser);
 
         JLabel lblPassword = new JLabel("Contraseña");
         lblPassword.setForeground(new Color(239, 199, 94));
         lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 30));
-        lblPassword.setBounds(225, 308, 172, 30);
+        lblPassword.setBounds(225, 373, 172, 30);
         add(lblPassword);
 
         usernameField = new JTextField();
         usernameField.setBackground(Color.DARK_GRAY);
         usernameField.setForeground(new Color(239, 199, 94));
-        usernameField.setBounds(492, 230, 249, 52);
+        usernameField.setBounds(492, 291, 249, 52);
         add(usernameField);
         usernameField.setColumns(10);
 
         passwordField = new JPasswordField();
         passwordField.setBackground(Color.DARK_GRAY);
         passwordField.setForeground(new Color(239, 199, 94));
-        passwordField.setBounds(492, 305, 249, 52);
+        passwordField.setBounds(492, 351, 249, 52);
         add(passwordField);
 
         JButton btnEnter = new JButton("Enter");
@@ -65,6 +65,16 @@ public class LoginPanel extends JPanel {
                 loginListener.actionPerformed(new ActionEvent(this, ActionEvent.ACTION_PERFORMED, "login"));
             } else {
                 JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
+                
+                JLabel logo = new JLabel("");
+                logo.setLabelFor(logo);
+                logo.setForeground(Color.WHITE);
+                logo.setBackground(Color.DARK_GRAY);
+                logo.setVerticalAlignment(SwingConstants.BOTTOM);
+                logo.setHorizontalAlignment(SwingConstants.RIGHT);
+                logo.setIcon(new ImageIcon("C:\\Users\\botac\\OneDrive\\PC JUAN\\Escritorio\\Imagen de WhatsApp 2024-07-17 a las 00.32.03_2c463cb5.jpg"));
+                logo.setBounds(180, 0, 372, 232);
+                add(logo);
             }
         });
 
