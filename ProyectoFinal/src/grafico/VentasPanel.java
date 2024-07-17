@@ -5,25 +5,37 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class VentasPanel extends JPanel {
-
     private static final long serialVersionUID = 1L;
     private JTextField Gusi550Field;
     private JTextField AiremaximoField;
     private JTextField ZamborsField;
     private JTextField WalkStarField;
     private JButton btnGenerateReport;
+    private JButton btnCerrarSesion;
 
     public VentasPanel() {
         setBackground(Color.DARK_GRAY);
         setLayout(new BorderLayout(0, 0));
 
-        JPanel panelSuperior = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        JPanel panelSuperior = new JPanel();
         panelSuperior.setBackground(Color.DARK_GRAY);
+        panelSuperior.setLayout(new GridLayout(0, 3, 0, 0));
+
+        JLabel lblNewLabel = new JLabel("");
+        panelSuperior.add(lblNewLabel);
+
         JLabel lblTitulo = new JLabel("INFORME DE VENTAS");
+        lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
         lblTitulo.setForeground(new Color(239, 199, 94));
         lblTitulo.setFont(new Font("Tahoma", Font.BOLD, 20));
         panelSuperior.add(lblTitulo);
         add(panelSuperior, BorderLayout.NORTH);
+
+        btnCerrarSesion = new JButton("Cerrar Sesión");
+        btnCerrarSesion.setFont(new Font("Tahoma", Font.PLAIN, 14));
+        btnCerrarSesion.setForeground(Color.RED);
+        btnCerrarSesion.setBackground(Color.DARK_GRAY);
+        panelSuperior.add(btnCerrarSesion);
 
         JPanel panelCentral = new JPanel(new GridLayout(4, 2, 10, 10));
         panelCentral.setBackground(Color.DARK_GRAY);
@@ -101,6 +113,10 @@ public class VentasPanel extends JPanel {
 
     public void addGenerateReportActionListener(ActionListener listener) {
         btnGenerateReport.addActionListener(listener);
+    }
+
+    public void addCerrarSesionActionListener(ActionListener listener) {
+        btnCerrarSesion.addActionListener(listener);
     }
 
     public int getGusi550Sales() {

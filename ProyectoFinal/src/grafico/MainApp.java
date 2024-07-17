@@ -1,14 +1,13 @@
 package grafico;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import logica.Login;
 import logica.Reporte;
 import logica.Ventas;
-
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class MainApp {
     private JFrame frame;
@@ -32,7 +31,6 @@ public class MainApp {
         frame = new JFrame("Sistema de Ventas");
         frame.setBounds(100, 100, 900, 600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
 
         cardLayout = new CardLayout();
         mainPanel = new JPanel(cardLayout);
@@ -50,8 +48,6 @@ public class MainApp {
                 }
             }
         });
-        loginPanel.setForeground(new Color(239, 199, 94));
-        loginPanel.setBackground(Color.DARK_GRAY);
 
         ventasPanel = new VentasPanel();
         ventasPanel.addGenerateReportActionListener(new ActionListener() {
@@ -74,6 +70,13 @@ public class MainApp {
             }
         });
 
+        ventasPanel.addCerrarSesionActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cardLayout.show(mainPanel, "Login");
+            }
+        });
+
         reportePanel = new ReportePanel();
         reportePanel.addShowChartActionListener(new ActionListener() {
             @Override
@@ -85,6 +88,13 @@ public class MainApp {
             @Override
             public void actionPerformed(ActionEvent e) {
                 reporte.downloadReport("reporte.txt");
+            }
+        });
+        
+        reportePanel.addRegresarInformeActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cardLayout.show(mainPanel, "Ventas");
             }
         });
 
