@@ -216,7 +216,7 @@ public class MainApp extends JFrame {
 
         JButton btnIniciarPrograma = new JButton("Iniciar Programa");
         btnIniciarPrograma.setFont(new Font("Tahoma", Font.BOLD, 17));
-        btnIniciarPrograma.setBounds(342, 500, 175, 50);
+        btnIniciarPrograma.setBounds(311, 498, 229, 50);
         btnIniciarPrograma.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
