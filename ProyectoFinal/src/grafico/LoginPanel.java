@@ -69,7 +69,7 @@ public class LoginPanel extends JPanel {
                 JLabel logo = new JLabel("");
                 logo.setLabelFor(logo);
                 logo.setForeground(Color.WHITE);
-                logo.setBackground(Color.DARK_GRAY);
+                logo.setBackground(new Color(153, 0, 0));
                 logo.setVerticalAlignment(SwingConstants.BOTTOM);
                 logo.setHorizontalAlignment(SwingConstants.RIGHT);
                 logo.setIcon(new ImageIcon("C:\\Users\\botac\\OneDrive\\PC JUAN\\Escritorio\\Imagen de WhatsApp 2024-07-17 a las 00.32.03_2c463cb5.jpg"));

@@ -169,7 +169,7 @@ public class MainApp extends JFrame {
 
         JTextPane txtpnAbigailKooJuan = new JTextPane();
         txtpnAbigailKooJuan.setFont(new Font("Tahoma", Font.PLAIN, 17));
-        txtpnAbigailKooJuan.setBackground(Color.WHITE);
+        txtpnAbigailKooJuan.setBackground(SystemColor.menu);
         txtpnAbigailKooJuan.setText("Juan Botacio 8-1011-560 \r\nOctavio Frauca 8-1010-1989 \r\nAbigail Koo 8-997-974 \r\nMaria Quiñones  8-988-1507 \r\n\r\n");
         txtpnAbigailKooJuan.setBounds(311, 337, 221, 92);
         presentacionPanel.add(txtpnAbigailKooJuan);
@@ -277,6 +277,11 @@ public class MainApp extends JFrame {
 
         mainPanel.add(presentacionPanel, "Presentacion");
         mainPanel.add(loginPanel, "Login");
+        
+        JLabel lblNewLabel_2 = new JLabel("");
+        lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\botac\\OneDrive\\PC JUAN\\Escritorio\\Imagen de WhatsApp 2024-07-17 a las 00.32.03_2c463cb5.jpg"));
+        lblNewLabel_2.setBounds(369, 31, 240, 196);
+        loginPanel.add(lblNewLabel_2);
         mainPanel.add(ventasPanel, "Ventas");
         mainPanel.add(reportePanel, "Reporte");
 
