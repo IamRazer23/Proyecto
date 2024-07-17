@@ -25,14 +25,4 @@ public class Reporte {
         return (int) (ventas.calculateTotalSales() * 1.1); // Predicción simple: incremento del 10%
     }
 
-    public void showPieChart() {
-        // Implementar la lógica para mostrar una gráfica de pastel con gastos, ventas y ganancias.
-        // Esta es una simulación simple, en una implementación real se utilizaría una biblioteca de gráficos como JFreeChart.
-        System.out.println("Mostrando gráfica de pastel...");
-    }
-
-    public void downloadReport(String filename) {
-        // Implementar la lógica para descargar el reporte.
-        System.out.println("Reporte descargado como " + filename);
-    }
 }

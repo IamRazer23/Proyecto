@@ -27,12 +27,11 @@ public class ReportePanel extends JPanel {
         add(scrollPane, BorderLayout.CENTER);
         
         panel = new JPanel();
-        panel.setBackground(Color.DARK_GRAY);
         scrollPane.setColumnHeaderView(panel);
         panel.setLayout(new GridLayout(0, 3, 0, 0));
         
         lblNewLabel_1 = new JLabel("Regresar Informe");
-        lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+        lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 17));
         lblNewLabel_1.setBackground(Color.DARK_GRAY);
         panel.add(lblNewLabel_1);
         
