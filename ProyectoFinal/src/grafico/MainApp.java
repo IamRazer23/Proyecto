@@ -76,20 +76,6 @@ public class MainApp {
                 cardLayout.show(mainPanel, "Login");
             }
         });
-
-        reportePanel = new ReportePanel();
-        reportePanel.addShowChartActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                reporte.showPieChart();
-            }
-        });
-        reportePanel.addDownloadReportActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                reporte.downloadReport("reporte.txt");
-            }
-        });
         
         reportePanel.addRegresarInformeActionListener(new ActionListener() {
             @Override
