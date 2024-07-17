@@ -13,36 +13,46 @@ public class LoginPanel extends JPanel {
     private JPasswordField passwordField;
 
     public LoginPanel(ActionListener loginListener) {
+    	setBackground(Color.DARK_GRAY);
         setLayout(null);
         setBounds(0, 0, 900, 600);
 
         JLabel lblLogin = new JLabel("Inicio de Sesión");
+        lblLogin.setForeground(new Color(239, 199, 94));
         lblLogin.setFont(new Font("Tahoma", Font.BOLD, 40));
-        lblLogin.setBounds(301, 144, 336, 52);
+        lblLogin.setBounds(301, 133, 336, 52);
         add(lblLogin);
 
         JLabel lblUser = new JLabel("Usuario");
+        lblUser.setForeground(new Color(239, 199, 94));
         lblUser.setFont(new Font("Tahoma", Font.PLAIN, 30));
         lblUser.setBounds(246, 233, 100, 30);
         add(lblUser);
 
         JLabel lblPassword = new JLabel("Contraseña");
+        lblPassword.setForeground(new Color(239, 199, 94));
         lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 30));
         lblPassword.setBounds(225, 308, 172, 30);
         add(lblPassword);
 
         usernameField = new JTextField();
+        usernameField.setBackground(Color.DARK_GRAY);
+        usernameField.setForeground(new Color(239, 199, 94));
         usernameField.setBounds(492, 230, 249, 52);
         add(usernameField);
         usernameField.setColumns(10);
 
         passwordField = new JPasswordField();
+        passwordField.setBackground(Color.DARK_GRAY);
+        passwordField.setForeground(new Color(239, 199, 94));
         passwordField.setBounds(492, 305, 249, 52);
         add(passwordField);
 
         JButton btnEnter = new JButton("Enter");
+        btnEnter.setBackground(Color.DARK_GRAY);
+        btnEnter.setForeground(new Color(239, 199, 94));
         btnEnter.setFont(new Font("Tahoma", Font.PLAIN, 32));
-        btnEnter.setBounds(375, 414, 215, 61);
+        btnEnter.setBounds(359, 414, 215, 61);
         add(btnEnter);
 
         btnEnter.addActionListener(e -> {

@@ -50,7 +50,8 @@ public class MainApp {
                 }
             }
         });
-        loginPanel.setBackground(new Color(169, 169, 169));
+        loginPanel.setForeground(new Color(239, 199, 94));
+        loginPanel.setBackground(Color.DARK_GRAY);
 
         ventasPanel = new VentasPanel();
         ventasPanel.addGenerateReportActionListener(new ActionListener() {
